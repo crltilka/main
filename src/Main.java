@@ -1,7 +1,5 @@
 public class Main {
-    public static void main(String[] args)
-
-    {
+    public static void main(String[] args) {
         int x2 = 0b1111000;
         int x8 = 0170;
         int x10 = 120;
@@ -20,9 +18,9 @@ public class Main {
         short r16 = 0x131;
         int sumShort = r2 + r8 + r10 + r16;
 
-        long  a10 = 200;
-        long  a2 = 0b11001000;
-        long  a8 = 0310;
+        long a10 = 200;
+        long a2 = 0b11001000;
+        long a8 = 0310;
         long a16 = 0xC8;
         long sumlong = (int) (a10 + a2 + a8 + a16);
 
@@ -42,18 +40,30 @@ public class Main {
         float p16 = 0x1F4;
         int sumFloat = (int) (p10 + p2 + p8 + p16);
 
+        double degreeFahrenheit = 298;
+        double degreeCelsius = (degreeFahrenheit - 32) * 5 / 9;
+        convertToCelsius(degreeFahrenheit, degreeCelsius);
+
+        double inch = 20;
+        double cmConverting = inch * 2.54;
+        convertToCm(cmConverting);
 
 
-
-        long result = sumByte + sumInt + sumlong + sumChar + sumDouble + sumFloat ;
+        long result = sumByte + sumInt + sumlong + sumChar + sumDouble + sumFloat;
         System.out.println(result);
 
 
+    }
 
-
-
+    public static double convertToCelsius(double degreeFahrenheit, double degreeCelsius) {
+        System.out.println("Fahrenheit degree convinced to the Celsius degree: +degreeCelsius");
+        return degreeCelsius;
 
 
     }
 
+    public static double convertToCm(double cmConverting) {
+        System.out.println("Inch convinced to cm: +cmConverting");
+        return cmConverting;
     }
+}
